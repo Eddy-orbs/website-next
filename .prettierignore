@@ -8,6 +8,10 @@ src/app/generated-types/
 # machine-written file nobody reads.
 src/contentful-types/
 
+# Contentful snapshot written by `npm run snapshot-content`: 7 MB of
+# machine-written JSON, regenerated wholesale and never edited by hand.
+src/app/lib/contentful-snapshot/
+
 # LEGAL DOCUMENTS. Deliberately not style-managed.
 #
 # These are the privacy policy, terms of use, accessibility declaration and
@@ -23,6 +27,10 @@ src/content/faq/
 # Legacy author markdown copied verbatim from the old Cuttlebelle site, used as
 # input by the migration scripts. Source data we did not write and do not edit.
 scripts/orbs-website-migration/authors/
+
+# OIP-10 burn tracker: a reviewed, self-contained static page served
+# byte-for-byte from public/. Reformatting it would change an approved artefact.
+public/oip10-burn/
 
 # Build output, dependencies and review artefacts.
 .next/
