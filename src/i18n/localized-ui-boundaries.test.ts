@@ -125,7 +125,7 @@ describe('locale catalog wiring preserves presentation and navigation', () => {
     expect(html).toContain(ui.japaneseEdition)
     expect(html).toContain(ui.koreanEdition)
     expect(html).toContain(`href="${localeHref('/white-papers', locale)}"`)
-    expect(await whitePaperMetadata('not-a-paper', locale)).toEqual({ title: 'Paper not found' })
+    expect(await whitePaperMetadata('not-a-paper', locale)).toEqual({ title: ui.notFound })
   })
 
   it('renders Japanese FAQ links to available Japanese destinations while preserving external URLs', () => {

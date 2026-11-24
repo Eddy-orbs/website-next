@@ -5,7 +5,7 @@
 - Use `Orbs` for the brand and `ORBS` for the token. Keep product names (dSPOT, dPERPS, dTWAP, dLIMIT, Orbs Agentic, Orbs Lambda, Orbs VM), code, contract identifiers and published PDF URLs intact.
 - Follow the existing Japanese staking, contract and privacy-policy terminology: ステーキング, 流動性, スマートコントラクト, ガーディアン, デリゲータ. Explain new trading concepts in polite Japanese; use concise noun phrases for headings.
 - Use 執行 for trade execution, 実行 for computational execution, 指値注文, 成行注文, 損切り, 利確, 無期限先物, ノンカストディアル and 自己管理 consistently.
-- Preserve existing English navigation/product labels, as in the Japanese legacy chrome and Korean refresh. Translate descriptions, accessibility controls and forms. Keep the Japanese community blog and existing social destinations; do not copy Korean channel overrides.
+- Keep product names in Latin script; use consistent Japanese labels for ordinary navigation and footer links. Translate descriptions, accessibility controls and forms. Keep the Japanese community blog and existing social destinations; do not copy Korean channel overrides.
 - English is the source of current product facts; Korean is a cross-check for structure and meaning, not a reason to copy Korean-only wording. In particular, dSPOT funds stay in the wallet until execution, whereas dPERPS collateral is handled by self-custodial contracts. Do not turn execution conditions into unconditional fill guarantees.
 
 ## Coverage and exclusions
@@ -18,7 +18,7 @@ Published PDFs and CMS articles are not translated. Japanese news headings and n
 
 ## Integration rules
 
-- dPERPS section eyebrow strings are intentionally empty in Japanese and Korean. The main-branch renderer is retained without locale-specific suppression; English keeps its labels and layout spacing follows main.
+- dPERPS section eyebrow strings are intentionally empty in Japanese. The main-branch renderer is retained without locale-specific suppression; English keeps its labels and layout spacing follows main.
 - `/jp/` remains the URL prefix; `ja` remains the locale/language code.
 - Add reachable translated pages through the shared registry/availability map, not duplicate renderers.
 - News, pagination and white-paper interface copy is read from the locale catalogs, not embedded in shared renderers. Explicit locale lookup keeps pages prerenderable.
@@ -35,6 +35,15 @@ Run the Node and Chromium/Storybook suites, formatting, ESLint, route type gener
 ## November main integration preview
 
 - Main revision `ef00130` supplies the shared layouts, product graphics and social metadata. Existing Japanese translations remain including the newly added or semantically changed strings, now translated in the Japanese catalog.
-- Newly translated copy covers dPERPS marquee/risk headings, Execution Services function/service descriptions and labels, dSPOT order navigation, and the standardized SDK CTA.
+- Newly translated copy covers dPERPS marquee/risk headings, Execution Services function/service descriptions and labels, dSPOT order navigation, while the standardized SDK CTA remains `Start building`.
 - Japanese Contact subtitle is an empty catalog string. Its contact-type label is restored visibly: blanking it would remove the select's accessible name, and locale-specific hiding code is not retained.
-- Japanese/Korean dPERPS eyebrows remain empty strings without custom suppression or spacing code. The Overview section is removed by upstream for all locales, not by a translation override.
+- Japanese dPERPS eyebrows remain empty strings without custom suppression or spacing code. The Overview section is removed by upstream for all locales, not by a translation override.
+
+## PR 374 review follow-up
+
+- The expanded Japanese availability is intentional: this is the planned full public-page follow-up, including both FAQs and all white-paper title/abstract pages. Published PDFs and CMS articles remain in their source languages.
+- Korean dPERPS eyebrow values are restored to main; any Korean-only hiding change belongs in a separate PR.
+- Use チームに相談する for both “Talk to the team” and “Talk to us”; MEV対策, ガス代不要, レポート作成と監査証跡, 自社ブランド and 監査報告書 consistently. Use プルーフ・オブ・ステーク and デリゲータ in Japanese prose.
+- The dSPOT execution heading describes aiming for optimal execution conditions, rather than using 最良執行 as a regulatory claim. This is an editorial clarification, not a legal-compliance certification or an execution guarantee.
+- News cards retain English CMS headlines and accessible link names. Dates use the page locale and carry their own language attribute.
+- Unused Japanese Overview legacy product cards/marquee/closing/tech title and Execution Services alternatives/evolution keys were removed after checking their renderers. The absence regression check retains the old heading as a test fixture, not as live catalog copy.

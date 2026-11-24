@@ -1246,7 +1246,7 @@
           "venue": "Venue",
           "institution": "Institution",
           "developer": "Developer",
-          "other": "Others"
+          "other": "Other"
         },
         "invalidContactType": "Please select a valid option",
         "message": "Message",

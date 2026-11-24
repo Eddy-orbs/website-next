@@ -49,7 +49,7 @@ describe('Execution Services Templates refinement', () => {
     expect(html).toContain(ja.pages.executionServices.vm.body)
     expect(html).not.toContain(en.pages.executionServices.lambdaProduct.body)
     expect(html).not.toContain(en.pages.executionServices.vm.body)
-    expect(html).not.toContain(ja.pages.executionServices.alternatives.title)
+    expect(html).not.toContain('クラウドコンピューティングの選択肢')
     expect(html).not.toContain('graph-1.png')
   })
 })

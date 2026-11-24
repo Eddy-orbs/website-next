@@ -50,7 +50,7 @@ export async function NewsIndex({ currentPage, locale = 'en' }: { currentPage: n
       <Heading locale={locale} title={t('title')} description={t('description')} />
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {items.map((mention) => (
-          <MediaCard key={mention.url} mention={mention} />
+          <MediaCard key={mention.url} mention={mention} locale={locale} />
         ))}
       </div>
       <Pagination
